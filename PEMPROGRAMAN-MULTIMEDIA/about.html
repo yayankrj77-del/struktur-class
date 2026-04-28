@@ -1,0 +1,149 @@
+// ===== about.php =====
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - Multimedia Engineering</title>
+<link rel="stylesheet" href="about.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="assetlogo.png" alt="logo">
+    </div>
+
+    <nav>
+        <a href="index.php">Home</a>
+        <a href="#" class="active">Tentang</a>
+        <a href="#">Struktur</a>
+        <a href="#">Anggota</a>
+        <a href="#">Galery Karya</a>
+        <a href="#">Jadwal</a>
+    </nav>
+</header>
+
+<section class="about">
+
+    <div class="title">
+        <h1>About Multimedia<br>Engineering</h1>
+    </div>
+
+    <div class="box-large"></div>
+    <div class="box-side"></div>
+
+</section>
+
+</body>
+</html>
+<style>
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#d6c1a8;
+    font-family:'Poppins', sans-serif;
+}
+
+header{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:2% 5%;
+    background:#ffffff;
+}
+
+.logo img{
+    width:6%;
+}
+
+nav{
+    background:#a66f3b;
+    padding:1.5% 4%;
+    border-radius:3vw;
+    display:flex;
+    gap:3%;
+}
+
+nav a{
+    text-decoration:none;
+    color:black;
+    font-weight:600;
+    font-size:1.2vw;
+    position:relative;
+}
+
+nav a.active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-0.5vw;
+    width:100%;
+    height:0.2vw;
+    background:black;
+}
+
+/* ABOUT SECTION */
+.about{
+    position:relative;
+    padding:5%;
+}
+
+.title h1{
+    font-family:'Playfair Display', serif;
+    font-size:5vw;
+    font-weight:500;
+    color:black;
+}
+
+/* BOX BESAR BAWAH */
+.box-large{
+    position:absolute;
+    left:5%;
+    bottom:5%;
+    width:70%;
+    height:45%;
+    background:#a66f3b;
+    border-radius:2vw;
+    box-shadow:0 0.5vw 1vw rgba(0,0,0,0.2);
+}
+
+/* BOX KANAN */
+.box-side{
+    position:absolute;
+    right:5%;
+    top:20%;
+    width:25%;
+    height:60%;
+    background:#a66f3b;
+    border-radius:2vw;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+    .title h1{
+        font-size:10vw;
+        text-align:center;
+    }
+
+    .box-large{
+        position:relative;
+        width:100%;
+        height:30vh;
+        margin-top:5%;
+    }
+
+    .box-side{
+        position:relative;
+        width:100%;
+        height:30vh;
+        margin-top:5%;
+    }
+}
+</style>

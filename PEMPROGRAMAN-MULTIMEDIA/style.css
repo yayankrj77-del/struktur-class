@@ -1,0 +1,151 @@
+:root {
+    --bg-light: #ffffff;
+    --bg-color: #f1d5b9;
+    --accent-brown: #a67443;
+    --text-dark: #000000;
+    --nav-bg: #b07d4e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    color: var(--text-dark);
+    overflow-x: hidden;
+
+    /* Gradient background */
+    background: linear-gradient(135deg, #fae8d6 0%, #966837 100%);
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5% 6%;
+    background-color: var(--bg-light);
+    width: 100%;
+    box-shadow: 0 0.5% 1% rgba(0,0,0,0.05);
+}
+
+.logo-top img {
+    width: 3vw;
+    min-width: 40px;
+}
+
+/* NAV */
+nav {
+    background-color: var(--nav-bg);
+    padding: 0.8% 2.5%;
+    border-radius: 1vw;
+    display: flex;
+    gap: 1.5vw;
+    box-shadow: 0 0.5vw 1vw rgba(0,0,0,0.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 1vw;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -0.3vw;
+    left: 0;
+    width: 100%;
+    height: 0.2vw;
+    background-color: var(--text-dark);
+}
+
+/* MAIN */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 6%;
+}
+
+/* TEXT */
+.hero-text {
+    width: 55%;
+}
+
+.hero-text h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 6vw;
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 2%;
+}
+
+/* GLASS BOX */
+.description-box {
+    background: rgba(166, 116, 67, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 0.1vw solid rgba(255,255,255,0.2);
+    padding: 2.5%;
+    border-radius: 1.5vw;
+    width: 80%;
+
+    box-shadow: 0 1.5vw 3vw rgba(0,0,0,0.25);
+}
+
+.description-box p {
+    color: #fff;
+    font-size: 1.2vw;
+    line-height: 1.5;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* LOGO KANAN */
+.hero-logo-large {
+    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero-logo-large img {
+    width: 70%;
+    max-width: 400px;
+    height: auto;
+    filter: drop-shadow(0.5vw 1vw 2vw rgba(0,0,0,0.2));
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-logo-large {
+        justify-content: center;
+        margin-top: 5%;
+    }
+
+    .hero-logo-large img {
+        width: 60%;
+    }
+
+    nav {
+        display: none;
+    }
+}
